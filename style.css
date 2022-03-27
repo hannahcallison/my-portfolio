@@ -16,18 +16,19 @@ html {
 
 header {
     background-color: var(--bg-colordark);
-    height: 10vh;
+    height: 15vh;
     padding-top: 10px;
 }
 
 header h1 {
     display: flex;
     justify-content: flex-end;
+    font-size: 50px;
     border: 10%;
     background-color: var(--light);
     color: var(--bg-colordark);
-    width: 30%;
-    padding: .7%;
+    width: 40%;
+    padding: 1.5%;
 }
 
 nav ul {
@@ -35,16 +36,21 @@ nav ul {
     justify-content: flex-end;
     flex-wrap: wrap;
     position: relative;
-    top: -6vh;
+    top: -9vh;
 
 }
 
 ul li {
     list-style-type: none;
-    padding: 10px 30px;
+    padding: 10px 15px;
+}
+
+#resume {
+    margin-right: 30px;
 }
 
 a, a:visited {
+    padding: 5px;
     border-bottom: 2px solid var(--light);
     text-decoration: none;
     color: lightblue;
@@ -74,7 +80,32 @@ a:hover {
     background-color: var(--light);
     color: var(--bg-colordark);
 }
-@media screen and (max-width:800px) {
+
+h2 {
+    float: left;
+    font-size: 50px;
+    text-align: right;
+    border-right: 5px solid var(--bg-colordark);
+    padding: 30px;
+    color: var(--bg-colordark);
+    width: 20%;
+    margin-right: 5vh;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    word-break: break-all;
+    max-width: 75%;
+    position: relative;
+    top: -15vh;
+    margin-left: 40vh;
+}
+
+@media screen and (max-width:768px) {
     html {
         min-width: 100%;
     }
@@ -99,5 +130,5 @@ a:hover {
 
     .subtitle {
         position: relative;
-        left: 30%;
+        left: 28%;
 }
