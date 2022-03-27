@@ -101,8 +101,20 @@ p {
     word-break: break-all;
     max-width: 75%;
     position: relative;
-    top: -15vh;
+    top: -20.8vh;
     margin-left: 40vh;
+    line-height: 20px;
+}
+
+.contact a {
+    color: var(--bg-colordark);
+    padding: 5px;
+    border-bottom: 2px solid var(--bg-colordark)
+}
+
+.contact a:hover {
+    cursor: pointer;
+    text-shadow: 0 0 20px var(--bg-colordark);
 }
 
 @media screen and (max-width:768px) {
