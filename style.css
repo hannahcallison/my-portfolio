@@ -1,3 +1,8 @@
+:root {
+    --light: lightblue;
+    --bg-colordark: rgb(55,61,66)
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,14 +10,8 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* NEEDS WORK */
 body {
-    max-width: 100%;
-}
-
-:root {
-    --light: lightblue;
-    --bg-colordark: rgb(55,61,66)
+    width: 100%;
 }
 
 header {
@@ -32,34 +31,33 @@ header h1 {
     padding: 1.5%;
 }
 
-nav ul {
+.navigation {
     display: flex;
     justify-content: flex-end;
-    flex-wrap: wrap;
     position: relative;
     top: -9vh;
 
 }
 
-ul li {
+.navigation li {
     list-style-type: none;
     padding: 10px 15px;
 }
 
-#resume {
-    margin-right: 30px;
-}
-
-a, a:visited {
+.navigation li a, .navigation li a:visited {
     padding: 5px;
     border-bottom: 2px solid var(--light);
     text-decoration: none;
     color: lightblue;
 }
 
-a:hover {
+.navigation li a:hover {
     cursor: pointer;
     text-shadow: 0 0 10px var(--light);
+}
+
+#resume {
+    margin-right: 30px;
 }
 
 .hero {
@@ -71,71 +69,100 @@ a:hover {
     background-position: top;
 }
 
+/* Need Work Flexbox?? */
 .subtitle {
     position: absolute;
     top: 45%;
     /* NEEDS WORK */
     left: 78%;
     font-size: 30px;
-    padding: 5px 26px;
+    padding: 5px;
     border: 5px solid var(--light);
     background-color: var(--light);
     color: var(--bg-colordark);
     max-width: 100%;
 }
 
-
-/* Needs Work */
-/* span.subtitle {
-    display: inline-flex;
-
-
-    width: 30%;
-} */
-
-    .subtitle {
-    font-size: 30px;
-    padding: 5px;
-    border: 5px solid var(--light);
-    background-color: var(--light);
-    color: var(--bg-colordark);
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 section {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 3%;
+}
+
+/* NEEDS WORK TEXT WRAP NOT HAPPENING ON CONTACT ME */
+.h2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    min-width: 20%;
+    font-size: 30px;
+    border-right: 5px solid var(--bg-colordark);
+    color: var(--bg-colordark);
+    padding-right: 18px;
 }
 
 p {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1%;
+}
+
+.cardcontainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 3px solid black;
+    text-align: center;
+    padding: 20vh;
+    margin: 3%;
+}
+
+.card:hover, .card:hover {
+    box-shadow: 5px 5px 20px 5px inset var(--bg-colordark);
+    transition: box-shadow 1s ease;
+    cursor: pointer;
+}
+
+.card:active {
+    box-shadow: 5px 5px 20px 5px inset var(--light);
+    transition: box-shadow .01s;
+}
+
+.contactcontainer {
+    position: relative;
+    top: 1vh;
+    left: 5vh;
+}
+
+.contactcontainer li {
     display: inline;
-    float: right;
-    max-width: 60%;
+    list-style-type: none;
+    font-size: 20px;
+    padding: 10px 40px;
 }
 
-h2 {
-    font-size: 50px;
-    border-right: 5px solid var(--bg-colordark);
-    padding: 30px;
-    color: var(--bg-colordark);
-    max-width: 20%;
-    text-align: right;
-}
-
-.contact a {
+.contactcontainer li a, .contactcontainer li a:visited {
     color: var(--bg-colordark);
     padding: 5px;
+    text-decoration: none;
     border-bottom: 2px solid var(--bg-colordark)
 }
 
-.contact a:hover {
+.contactcontainer a:hover {
     cursor: pointer;
     text-shadow: 0 0 20px var(--bg-colordark);
 }
 
 @media screen and (max-width:768px) {
-    html {
+    body {
         min-width: 100%;
     }
 
@@ -151,7 +178,7 @@ h2 {
         height: 10vh;
     }
 
-    nav ul {
+    .navigation{
         position: relative;
         top: 1vh;
         right: 18%;
@@ -160,4 +187,96 @@ h2 {
     .subtitle {
         position: absolute;
         left: 28%;
+    }
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .pcontainer {
+        text-align: center;
+    }
+
+    .h2 {
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+        border-right: none;
+        border-bottom: 5px solid var(--bg-colordark);
+        margin-bottom: 10px;
+    }
+    
+    .cardcontainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Format */
+    .contactcontainer {
+        position: relative;
+        top: 0;
+        left: 0;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width:480px) {
+    body {
+        min-width: 100%;
+    }
+
+    header {
+        padding: 0px;
+        height: 18vh;
+    }
+
+    header h1 {
+        width: 100%;
+        justify-content: center;
+        font-size: 300%;
+        height: 10vh;
+    }
+
+    .navigation{
+        position: relative;
+        top: 1vh; 
+        right: 0;
+    }
+
+    .subtitle {
+        position: absolute;
+        left: 40%;
+    }
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .pcontainer {
+        text-align: center;
+    }
+
+    .h2 {
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+        border-right: none;
+        border-bottom: 5px solid var(--bg-colordark);
+        margin-bottom: 10px;
+    }
+    
+    .cardcontainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Format */
+    .contactcontainer {
+        position: relative;
+        top: 0;
+        left: 0;
+        justify-content: space-between;
+    }
 }
