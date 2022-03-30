@@ -61,6 +61,7 @@ header h1 {
 }
 
 .hero {
+    position: relative;
     height: 300px;
     width: 100%;
     margin-bottom: 25px;
@@ -69,18 +70,15 @@ header h1 {
     background-position: top;
 }
 
-/* Need Work Flexbox?? */
 .subtitle {
     position: absolute;
-    top: 45%;
-    /* NEEDS WORK */
-    left: 78%;
+    top: 80%;
+    left: 75%;
     font-size: 30px;
     padding: 5px;
     border: 5px solid var(--light);
     background-color: var(--light);
     color: var(--bg-colordark);
-    max-width: 100%;
 }
 
 main {
@@ -95,16 +93,12 @@ section {
     margin-bottom: 3%;
 }
 
-/* NEEDS WORK TEXT WRAP NOT HAPPENING ON CONTACT ME */
-.h2 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    min-width: 20%;
-    font-size: 30px;
+section > h2 {
+    flex: 0 0 20%;
+    font-size: 50px;
     border-right: 5px solid var(--bg-colordark);
     color: var(--bg-colordark);
-    padding-right: 18px;
+    padding-left: 20px;
 }
 
 p {
@@ -137,21 +131,22 @@ p {
 }
 
 .contactcontainer {
-    position: relative;
-    top: 1vh;
-    left: 5vh;
+    display: flex;
+    align-items:center;
+
 }
 
-.contactcontainer li {
+.contactcontainer {
     display: inline;
     list-style-type: none;
-    font-size: 20px;
-    padding: 10px 40px;
+    font-size:20px;
+    padding: 40px 40px;
 }
 
-.contactcontainer li a, .contactcontainer li a:visited {
+.contactcontainer a, .contactcontainer a:visited {
     color: var(--bg-colordark);
     padding: 5px;
+    margin-right: 40px;
     text-decoration: none;
     border-bottom: 2px solid var(--bg-colordark)
 }
@@ -186,7 +181,7 @@ p {
 
     .subtitle {
         position: absolute;
-        left: 28%;
+        left: 30%;
     }
 
     section {
@@ -198,8 +193,9 @@ p {
         text-align: center;
     }
 
-    .h2 {
+    section > h2 {
         min-width: 100%;
+        padding: 0;
         display: flex;
         justify-content: center;
         border-right: none;
@@ -212,12 +208,16 @@ p {
         justify-content: center;
     }
 
-    /* Format */
-    .contactcontainer {
-        position: relative;
-        top: 0;
-        left: 0;
-        justify-content: space-between;
+
+    .contact {
+        position: absolute;
+        left: 36%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 30px;
+        
     }
 }
 
@@ -246,7 +246,7 @@ p {
 
     .subtitle {
         position: absolute;
-        left: 40%;
+        left: 20%;
     }
 
     section {
@@ -265,6 +265,7 @@ p {
         border-right: none;
         border-bottom: 5px solid var(--bg-colordark);
         margin-bottom: 10px;
+        padding: 0;
     }
     
     .cardcontainer {
@@ -272,11 +273,9 @@ p {
         justify-content: center;
     }
 
-    /* Format */
-    .contactcontainer {
-        position: relative;
-        top: 0;
-        left: 0;
-        justify-content: space-between;
+    .contact {
+        display: flex;
+        justify-content: center;
+        left: 28%;
     }
 }
