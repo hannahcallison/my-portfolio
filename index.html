@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hannah Callison's Portfolio</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
                 <li><a href="#about"> About Me</a></li>
                 <li><a href="#work">Work</a></li>
                 <li><a href="#contact"> Contact Me</a></li>
-                <li id="resume"><a href="#">Resume</a></li>
+                <li id="resume"><a href="./assets/HANNAH CALLISON Resume.pdf" target="_blank">Resume</a></li>
             </ul>
         </nav>
     </header>
@@ -28,6 +28,7 @@
             <h2 id="about">About Me</h2>
 
             <div class="pcontainer">
+                <img id="selfie" src="./assets/IMG_4571 copy.PNG" alt="Hannah Callison selfie" width="200" length="200">
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi expedita beatae dolorem cupiditate
                     ullam,
                     veritatis numquam ipsam quo. Sapiente cum labore laudantium magnam veritatis illum autem provident
@@ -46,12 +47,40 @@
             <h2 id="work">Work</h2>
 
             <div class="cardcontainer">
-                <div class="card" id="project-1">Project 1</div>
-                <div class="card">Project 2</div>
-                <div class="card">Project 3</div>
-                <div class="card">Project 4</div>
-                <div class="card">Project 5</div>
-                <div class="card">Project 6</div>
+                <div class="card" id="project-1"><button id="myBtn"></button></div>
+                <!-- The Modal -->
+                <div id="myModalOne" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span id="spanOne" class="close">&times;</span>
+                        <a href="https://github.com/hannahcallison/project-1-official" target="_blank">GitHub Repo</a>
+                        <a href="https://hannahcallison.github.io/project-1-official/" target="_blank">Deployed Link</a>
+                    </div>
+                </div>
+
+                <div class="card" id="project-2"><button id="myBtn"></button></div>
+                <!-- The Modal -->
+                <div id="myModalTwo" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span id="spanTwo" class="close">&times;</span>
+                        <a href="https://github.com/hannahcallison/password-generator" target="_blank">GitHub Repo</a>
+                        <a href="https://hannahcallison.github.io/password-generator/" target="_blank">Deployed Link</a>
+                    </div>
+                </div>
+                <div class="card" id="project-3"><button id="myBtn"></button></div>
+                     <!-- The Modal -->
+                     <div id="myModalThree" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span id="spanThree" class="close">&times;</span>
+                            <a href="https://github.com/hannahcallison/work-day-schedule" target="_blank">GitHub Repo</a>
+                            <a href="https://hannahcallison.github.io/work-day-schedule/" target="_blank">Deployed Link</a>
+                        </div>
+                    </div>
+                <div class="card" id="project-4"></div>
+                <div class="card" id="project-5"></div>
+                <div class="card" id="project-6"></div>
             </div>
         </section>
         <section>
@@ -62,14 +91,14 @@
                 <nav>
                     <a href="tel:+4152941148">415.294.1148</a>
                     <a href="mailto:hgcallison7@gmail.com">hgcallison7@gmail.com</a>
-                    <a href="https://github.com/hannahcallison">GitHub</a>
-                    <a href="https://www.linkedin.com/in/hannah-callison-5bb23213b" target="_blank">LinkedIn</a>
-                    <a href="./HANNAH CALLISON Resume.pdf" target="_blank">Resume</a>
-
+                    <a href="https://github.com/hannahcallison" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/hannahcallison" target="_blank">LinkedIn</a>
+                    <a href="./assets/HANNAH CALLISON Resume.pdf" target="_blank">Resume</a>
                 </nav>
             </div>
         </section>
     </main>
+    <script src="./assets/script.js"></script>
 </body>
 
 </html>

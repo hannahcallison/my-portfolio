@@ -88,6 +88,11 @@ p {
     display: flex;
     flex-wrap: wrap;
     padding: 1%;
+    margin-left: 11px;
+}
+
+#selfie {
+    margin-left: 25px;
 }
 
 .cardcontainer {
@@ -98,9 +103,94 @@ p {
 .card {
     border: 3px solid black;
     text-align: center;
-    padding: 20vh;
+    height: 40vh;
+    width: 40vh;
     margin: 3%;
     background-image: url(./fhEwl.png);
+    text-shadow: 0px 0px 10px black;
+
+}
+
+#myBtn {
+    background: none;
+    border:none;
+    padding:0;
+    text-shadow: 0px 0px 10px black; 
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+  }
+
+  .modal-content a {
+    list-style-type: none;
+    padding: 5px 15px;
+    margin: 10px;
+    border-bottom: 2px solid var(--bg-colordark);
+    text-decoration: none;
+    color: var(--bg-colordark);
+  }
+
+  .modal-content a:hover {
+    cursor: pointer;
+    text-shadow: 0 0 20px var(--bg-colordark);
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+#project-1{
+    background-image: url(./Main\ Page\ Screenshot.jpeg);
+    background-position: center top;
+    background-repeat: none;
+    background-size: cover;
+}
+
+#project-2{
+    background-image: url(./Screen\ Shot\ 2022-04-18\ at\ 10.18.44\ PM.png);
+    background-position: center top;
+    background-repeat: none;
+    background-size: cover;
+}
+
+#project-3{
+    background-image: url(./Screen\ Shot\ 2022-04-18\ at\ 10.47.54\ PM.png);
+    background-position: center top;
+    background-repeat: none;
+    background-size: cover;
 }
 
 .card:hover, .card:hover {
@@ -135,6 +225,12 @@ p {
     text-shadow: 0 0 20px var(--bg-colordark);
 }
 
+section nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 
 
 
@@ -156,9 +252,9 @@ p {
     }
 
     .navigation{
-        position: relative;
-        top: 1vh;
-        right: 18%;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
     }
 
     section {
@@ -183,6 +279,10 @@ p {
     .cardcontainer {
         display: flex;
         justify-content: center;
+    }
+
+    .contactcontainer {
+        padding: 0;
     }
 
     .contactcontainer a {
@@ -247,4 +347,5 @@ p {
         justify-content: center;
         left: 28%;
     }
+
 } 
