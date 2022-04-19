@@ -19,7 +19,7 @@ and many more...
 
 Attached below is a screenshot of the final webpage.
 
-![Final Webpage](Webpage%20Screenshot.png)
+![Final Webpage](./assets/webpagee.png)
 
 **Link to published Webpage**:
 https://hannahcallison.github.io/my-portfolio/
