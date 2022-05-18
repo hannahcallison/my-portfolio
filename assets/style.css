@@ -193,6 +193,13 @@ p {
     background-size: cover;
 }
 
+#project-4{
+    background-image: url(./Screen\ Shot\ 2022-05-17\ at\ 6.57.26\ PM.png);
+    background-position: center top;
+    background-repeat: none;
+    background-size: cover;
+}
+
 .card:hover, .card:hover {
     box-shadow: 5px 5px 20px 5px inset var(--bg-colordark);
     transition: box-shadow 1s ease;
